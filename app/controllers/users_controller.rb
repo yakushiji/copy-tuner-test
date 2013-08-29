@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+
   def index
     @users = User.all
 
@@ -8,6 +9,9 @@ class UsersController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @users }
     end
+
+    foo = CGI.escape(t('tweet_text'))
+    url = t('tweet_text')
   end
 
   # GET /users/1
